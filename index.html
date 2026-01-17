@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mango Cleaning — Home</title>
+  <title>Mango Cleaning Solutions — Home</title>
 
   <!-- Fonts (swap if you want) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,23 +75,17 @@
       font-size: 13px;
     }
     .logo-mark{
-      width: 26px;
-      height: 26px;
-      border-radius: 8px;
-      background: radial-gradient(circle at 30% 30%, #9b7b54 0%, #6b4b2e 70%);
-      position: relative;
+      width: 34px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
     }
-    .logo-mark::after{
-      content:"";
-      position:absolute;
-      width: 10px; height: 8px;
-      border-radius: 10px 10px 2px 10px;
-      background: #4f6b3b;
-      top:-4px; right:4px;
-      transform: rotate(-18deg);
+    .logo-mark img{
+      width:100%;
+      height:auto;
+      display:block;
     }
-
-    nav ul{
+nav ul{
       list-style:none;
       display:flex;
       align-items:center;
@@ -332,6 +326,9 @@
       .hero-card{ min-height: 320px; }
     }
   </style>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="mango.png">
+  <link rel="apple-touch-icon" href="mango.png">
 </head>
 
 <body>
@@ -342,8 +339,10 @@
       <header>
         <div class="nav">
           <a class="brand" href="#">
-            <span class="logo-mark" aria-hidden="true"></span>
-            Mango
+            <span class="logo-mark" aria-hidden="true">
+              <img src="mango.png" alt="Mango Cleaning Solutions logo" loading="eager" decoding="async">
+            </span>
+            Mango Cleaning Solutions
           </a>
 
           <nav aria-label="Primary">
@@ -481,8 +480,8 @@
           <div class="card">
             <h2 style="margin-bottom:8px;">Reach Us</h2>
             <p style="margin:0;color:var(--muted);font-size:14px;">
-              Call: <strong style="color:#3a2b1f;">(555) 123-4567</strong><br/>
-              Email: <strong style="color:#3a2b1f;">hello@mangocleaning.com</strong><br/><br/>
+              Call: <strong style="color:#3a2b1f;">(419) 930-7785</strong><br/>
+              Email: <strong style="color:#3a2b1f;">hello@mangocleaningsolutions.com</strong><br/><br/>
               Hours: Mon–Fri, 8:00 AM – 6:00 PM
             </p>
           </div>
@@ -492,12 +491,14 @@
       <!-- FOOTER -->
       <footer>
         <div class="foot-left">
-          <span class="logo-mark" aria-hidden="true" style="width:22px;height:22px;border-radius:7px;"></span>
-          <span>© <span id="year"></span> Mango Cleaning</span>
+          <span class="logo-mark" aria-hidden="true" style="width:22px;">
+            <img src="mango.png" alt="" loading="lazy" decoding="async">
+          </span>
+          <span>© <span id="year"></span> Mango Cleaning Solutions</span>
         </div>
         <div class="foot-right">
-          Call Us: (555) 123-4567<br/>
-          Email: hello@mangocleaning.com
+          Call Us: (419) 930-7785<br/>
+          Email: hello@mangocleaningsolutions.com
         </div>
       </footer>
 
