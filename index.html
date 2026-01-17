@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mango Cleaning Solutions</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#f5f3ef;
+      --page:#ffffff;
+      --ink:#2b2b2b;
+      --muted:#6b6b6b;
+      --line:#e9e5df;
+      --brand:#7a5a3a;
+      --shadow:0 18px 50px rgba(0,0,0,.08);
+      --radius:18px;
+      --max:1080px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    }
+
+    .shell{
+      min-height:100vh;
+      padding:40px 16px;
+      display:flex;
+      justify-content:center;
+    }
+    .page{
+      width:min(var(--max),100%);
+      background:var(--page);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    header{
+      border-bottom:1px solid var(--line);
+      padding:16px 22px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:600;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      font-size:13px;
+    }
+
+    .logo{
+      width:38px;
+    }
+
+    nav a{
+      margin-left:18px;
+      text-decoration:none;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .hero{
+      padding:60px 22px;
+      text-align:center;
+    }
+
+    h1{
+      font-family:"Playfair Display",serif;
+      font-size:42px;
+      margin:0 0 14px;
+      color:#3a2b1f;
+    }
+
+    .sub{
+      color:#4f4b45;
+      max-width:520px;
+      margin:0 auto 24px;
+    }
+
+    .btn{
+      background:var(--brand);
+      color:#fff;
+      padding:12px 18px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:600;
+      display:inline-block;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:18px 22px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    @media(max-width:720px){
+      nav{display:none}
+      h1{font-size:32px}
+    }
+  </style>
+</head>
+
+<body>
+<div class="shell">
+<div class="page">
+
+<header>
+  <div class="brand">
+    <!-- EMBEDDED MANGO IMAGE -->
+    <svg class="logo" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M165 255C90 230 120 150 210 120C305 88 390 125 430 155C470 185 465 245 415 285C365 325 255 330 165 255Z"
+            stroke="#7a5a3a" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M410 150C445 120 475 110 500 112"
+            stroke="#7a5a3a" stroke-width="14" stroke-linecap="round"/>
+      <path d="M445 95C485 70 520 95 505 120C490 145 450 130 445 95Z"
+            stroke="#7a5a3a" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
+    Mango Cleaning Solutions
+  </div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Experience the Difference.</h1>
+  <p class="sub">
+    Calm, consistent, detail-forward cleaning for offices and professional environments.
+  </p>
+  <a class="btn" href="tel:+14199307785">Call (419) 930-7785</a>
+</section>
+
+<footer>
+  <span>© <span id="year"></span> Mango Cleaning Solutions</span>
+  <span>(419) 930-7785</span>
+</footer>
+
+</div>
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
