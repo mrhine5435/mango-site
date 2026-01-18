@@ -457,24 +457,71 @@ nav ul{
             </p>
 
             <!-- Simple form (replace action with your form handler) -->
-            <form action="#" method="post" style="display:grid; gap:10px;">
-              <label style="font-size:13px;color:var(--muted);">
-                Name
-                <input required name="name" type="text" style="width:100%;margin-top:6px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;" />
-              </label>
+            <form
+  action="https://formsubmit.co/matthew@mangocleaningsolutions.com"
+  method="POST"
+  style="display:grid; gap:10px;"
+>
 
-              <label style="font-size:13px;color:var(--muted);">
-                Email
-                <input required name="email" type="email" style="width:100%;margin-top:6px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;" />
-              </label>
+  <!-- Required FormSubmit settings -->
+  <input type="hidden" name="_subject" value="New Quote Request - Mango Cleaning Solutions">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://mrhine5435.github.io/mango-site/?success=true">
 
-              <label style="font-size:13px;color:var(--muted);">
-                Message
-                <textarea required name="message" rows="4" style="width:100%;margin-top:6px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;resize:vertical;"></textarea>
-              </label>
+  <!-- Honeypot (spam protection) -->
+  <input type="text" name="_honey" style="display:none">
 
-              <button class="btn" type="submit" style="justify-self:start;">Send</button>
-            </form>
+  <label style="font-size:13px;color:var(--muted);">
+    Name
+    <input
+      required
+      name="name"
+      type="text"
+      placeholder="Your full name"
+      style="width:100%;margin-top:6px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;"
+    />
+  </label>
+
+  <label style="font-size:13px;color:var(--muted);">
+    Email
+    <input
+      required
+      name="email"
+      type="email"
+      placeholder="you@example.com"
+      style="width:100%;margin-top:6px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;"
+    />
+  </label>
+
+  <label style="font-size:13px;color:var(--muted);">
+    Phone Number
+    <input
+      required
+      name="phone"
+      type="tel"
+      placeholder="(419) 930-7785"
+      pattern="[0-9\-\+\(\) ]+"
+      style="width:100%;margin-top:6px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;"
+    />
+  </label>
+
+  <label style="font-size:13px;color:var(--muted);">
+    Message
+    <textarea
+      required
+      name="message"
+      rows="4"
+      placeholder="Tell us about your space and cleaning needs"
+      style="width:100%;margin-top:6px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;resize:vertical;"
+    ></textarea>
+  </label>
+
+  <button class="btn" type="submit" style="justify-self:start;">
+    Send Request
+  </button>
+</form>
+
           </div>
 
           <div class="card">
