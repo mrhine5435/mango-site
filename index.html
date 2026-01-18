@@ -3,223 +3,570 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mango Cleaning Solutions</title>
+  <title>Mango Cleaning Solutions — Home</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Favicon -->
-  <link rel="icon" href="mango.png" type="image/png">
+  <!-- Fonts (swap if you want) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#f5f3ef;
-      --page:#ffffff;
-      --ink:#2b2b2b;
-      --muted:#6b6b6b;
-      --line:#e9e5df;
-      --brand:#7a5a3a;
-      --shadow:0 18px 50px rgba(0,0,0,.08);
-      --radius:18px;
-      --max:1080px;
+      --bg: #f5f3ef;
+      --page: #ffffff;
+      --ink: #2b2b2b;
+      --muted: #6b6b6b;
+      --line: #e9e5df;
+
+      --brand: #7a5a3a;        /* warm brown */
+      --brand-2: #c9b8a6;      /* light sand */
+      --shadow: 0 18px 50px rgba(0,0,0,.08);
+      --radius: 18px;
+      --max: 1080px;
     }
 
-    *{box-sizing:border-box}
-
+    *{ box-sizing: border-box; }
     body{
       margin:0;
-      background:var(--bg);
-      color:var(--ink);
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      line-height:1.4;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height: 1.4;
     }
 
+    /* Centered “site card” like the mock */
     .shell{
-      min-height:100vh;
-      padding:48px 18px;
+      min-height: 100vh;
+      padding: 48px 18px;
       display:flex;
+      align-items:flex-start;
       justify-content:center;
     }
-
     .page{
-      width:min(var(--max),100%);
-      background:var(--page);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      overflow:hidden;
+      width: min(var(--max), 100%);
+      background: var(--page);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
     }
 
+    /* Top nav */
     header{
-      background:#fff;
-      border-bottom:1px solid var(--line);
+      background: #fff;
+      border-bottom: 1px solid var(--line);
     }
-
     .nav{
       display:flex;
       align-items:center;
       justify-content:space-between;
-      padding:16px 22px;
+      padding: 14px 22px;
+      gap: 18px;
     }
-
     .brand{
       display:flex;
       align-items:center;
-      gap:14px;
+      gap:10px;
       text-decoration:none;
-      color:var(--ink);
-    }
+      color: var(--ink);
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      font-size: 13px;
+	  }
+	  
+	  /* Logo typography to match brand image */
+	.brand{
+	  font-family: "Cinzel", serif;
+	  letter-spacing: 0.14em;
+	}
+
+.brand span + span,
+.brand{
+  text-transform: uppercase;
+}
 
     .logo-mark{
-      width:42px;
+      width: 34px;
       display:inline-flex;
       align-items:center;
+      justify-content:center;
     }
-
     .logo-mark img{
       width:100%;
       height:auto;
       display:block;
     }
-
-    .brand-text{
-      display:flex;
-      flex-direction:column;
-      line-height:1.05;
-    }
-
-    .brand-main{
-      font-family:"Cinzel", serif;
-      font-weight:600;
-      font-size:18px;
-      letter-spacing:0.14em;
-    }
-
-    .brand-sub{
-      font-family:Inter, sans-serif;
-      font-size:10px;
-      letter-spacing:0.28em;
-      color:var(--muted);
-    }
-
-    nav ul{
+nav ul{
       list-style:none;
       display:flex;
-      gap:22px;
-      margin:0;
+      align-items:center;
+      gap: 22px;
       padding:0;
+      margin:0;
     }
-
     nav a{
       text-decoration:none;
-      color:var(--muted);
-      font-size:14px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
     }
+    nav a:hover{ color: var(--ink); }
 
-    nav a:hover{color:var(--ink)}
+    .nav-right{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+    }
+    .icon-btn{
+      width: 36px; height: 36px;
+      border: 1px solid var(--line);
+      background:#fff;
+      border-radius: 999px;
+      display:grid;
+      place-items:center;
+      cursor:pointer;
+    }
+    .icon-btn:hover{ border-color: #d9d3cb; }
 
     .btn{
-      background:var(--brand);
-      color:#fff;
-      padding:10px 16px;
-      border-radius:999px;
+      border: 1px solid transparent;
+      background: var(--brand);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 999px;
       text-decoration:none;
-      font-weight:600;
-      font-size:14px;
+      font-weight: 600;
+      font-size: 14px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+    .btn:hover{ filter: brightness(.96); }
+
+    /* Sections */
+    .section{
+      padding: 34px 22px;
+    }
+    .section + .section{
+      border-top: 1px solid var(--line);
     }
 
+    /* HERO */
     .hero{
-      padding:70px 22px;
+      padding: 28px 22px 34px;
+    }
+    .hero-card{
+      border-radius: 22px;
+      overflow:hidden;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.0), rgba(255,255,255,.75)),
+        url("https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      min-height: 360px;
+      display:grid;
+      place-items:center;
+      padding: 36px 18px;
+      position: relative;
+    }
+    .hero-inner{
       text-align:center;
+      max-width: 720px;
+      padding: 18px 18px 22px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.62);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(233,229,223,.9);
+    }
+    .kicker{
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin: 0 0 10px;
+    }
+    h1{
+      font-family: "Playfair Display", serif;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.1;
+      margin: 0 0 14px;
+      color: #3a2b1f;
+    }
+    .sub{
+      color: #4f4b45;
+      margin: 0 auto 18px;
+      font-size: 15px;
+      max-width: 54ch;
+    }
+    .hero-actions{
+      display:flex;
+      justify-content:center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .btn.secondary{
+      background: #fff;
+      color: var(--brand);
+      border-color: var(--brand-2);
+    }
+    .btn.secondary:hover{
+      border-color: #b8a691;
     }
 
-    .hero h1{
-      font-family:"Cinzel", serif;
-      font-size:42px;
-      letter-spacing:0.08em;
-      margin:0 0 16px;
-      color:#3a2b1f;
+    /* SERVICES (split layout like screenshot) */
+    .grid-2{
+      display:grid;
+      gap: 18px;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: stretch;
+    }
+    .card{
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      background: #fff;
+    }
+    .card h2{
+      font-family: "Playfair Display", serif;
+      margin: 0 0 10px;
+      font-size: 22px;
+      color: #3a2b1f;
+    }
+    .bullets{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .service-media{
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      overflow:hidden;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.04), rgba(0,0,0,.02)),
+        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1400&q=80");
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      min-height: 220px;
+    }
+    .service-media .overlay{
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, rgba(255,255,255,.15), rgba(255,255,255,.78));
+    }
+    .service-media .cta{
+      position:absolute;
+      right: 14px;
+      bottom: 14px;
     }
 
-    .hero p{
-      max-width:520px;
-      margin:0 auto 28px;
-      color:#4f4b45;
+    /* Testimonials */
+    .center-title{
+      text-align:center;
+      margin: 0 0 16px;
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      color: #3a2b1f;
+    }
+    .test-grid{
+      display:grid;
+      gap: 14px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .t-card{
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+      background: #fff;
+      display:flex;
+      gap: 12px;
+      align-items:flex-start;
+    }
+    .avatar{
+      width: 44px; height: 44px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #f3efe8, #e7dfd5);
+      flex: 0 0 auto;
+    }
+    .t-name{
+      font-weight: 600;
+      margin: 0 0 4px;
+      font-size: 14px;
+    }
+    .t-text{
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
     }
 
+    /* Footer */
     footer{
-      border-top:1px solid var(--line);
-      padding:18px 22px;
+      padding: 18px 22px;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      font-size:13px;
-      color:var(--muted);
+      gap: 14px;
+      border-top: 1px solid var(--line);
+      background: #fff;
+      flex-wrap: wrap;
     }
-
-    footer .footer-left{
+    .foot-left{
       display:flex;
       align-items:center;
-      gap:10px;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .foot-right{
+      color: var(--muted);
+      font-size: 13px;
+      text-align:right;
     }
 
-    @media(max-width:900px){
-      nav ul{display:none}
-      .hero h1{font-size:32px}
+    /* Responsive */
+    @media (max-width: 920px){
+      nav ul{ display:none; }
+      .grid-2{ grid-template-columns: 1fr; }
+      .test-grid{ grid-template-columns: 1fr; }
+      .hero-card{ min-height: 320px; }
     }
   </style>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="mango.png">
+  <link rel="apple-touch-icon" href="mango.png">
 </head>
 
 <body>
-<div class="shell">
-<div class="page">
+  <div class="shell">
+    <div class="page">
 
-<header>
-  <div class="nav">
-    <a class="brand" href="#">
-      <span class="logo-mark" aria-hidden="true">
-        <img src="https://raw.githubusercontent.com/mrhine5435/mango-site/main/mango.png" alt="Mango Cleaning Solutions logo">
-      </span>
-      <span class="brand-text">
-        <span class="brand-main">MANGO</span>
-        <span class="brand-sub">CLEANING SOLUTIONS</span>
-      </span>
-    </a>
+      <!-- HEADER / NAV -->
+      <header>
+        <div class="nav">
+          <a class="brand" href="#">
+            <span class="logo-mark" aria-hidden="true">
+              <img src="mango.png" alt="Mango Cleaning Solutions logo" loading="eager" decoding="async">
+            </span>
+            Mango Cleaning Solutions
+          </a>
 
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+          <nav aria-label="Primary">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
 
-    <a class="btn" href="tel:+14199307785">Call (419) 930-7785</a>
+          <div class="nav-right">
+            <button class="icon-btn" aria-label="Search">
+              <!-- simple icon -->
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b6b6b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="M21 21l-4.3-4.3"></path>
+              </svg>
+            </button>
+            <a class="btn" href="#contact">Schedule</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- HERO -->
+      <main id="home" class="hero">
+        <section class="hero-card" aria-label="Hero">
+          <div class="hero-inner">
+            <p class="kicker">Professional cleaning</p>
+            <h1>Experience the Difference.<br/>Book Your Trusted Space.</h1>
+            <p class="sub">
+              Calm, consistent, detail-forward cleaning for offices and professional environments.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" href="#contact">Schedule a Cleaning</a>
+              <a class="btn secondary" href="#services">View Services</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- SERVICES SPLIT -->
+      <section id="services" class="section">
+        <div class="grid-2">
+          <div class="card">
+            <h2>Personalized Services<br/>Serving Professional Environments</h2>
+            <p style="margin:0;color:var(--muted);font-size:14px;">
+              Reliable, recurring service with a checklist you can trust.
+            </p>
+            <ul class="bullets">
+              <li>Medical offices</li>
+              <li>Business &amp; commercial spaces</li>
+              <li>Educational facilities</li>
+            </ul>
+          </div>
+
+          <div class="service-media" role="img" aria-label="Cleaner in bright office">
+            <div class="overlay" aria-hidden="true"></div>
+            <a class="btn cta" href="#about">Learn More</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <h2 class="center-title">Simple. Professional. Consistent.</h2>
+        <div class="card" style="max-width: 860px; margin: 0 auto;">
+          <p style="margin:0;color:var(--muted);font-size:14px;">
+            Mango Cleaning provides dependable cleaning for busy spaces. We show up on time,
+            follow a clear checklist, and leave your team with a fresh, professional environment.
+          </p>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section id="testimonials" class="section">
+        <h2 class="center-title">What Our Clients Say</h2>
+        <div class="test-grid">
+          <div class="t-card">
+            <div class="avatar" aria-hidden="true"></div>
+            <div>
+              <p class="t-name">Alyssa R.</p>
+              <p class="t-text">“Always consistent and the office looks incredible every Monday.”</p>
+            </div>
+          </div>
+          <div class="t-card">
+            <div class="avatar" aria-hidden="true"></div>
+            <div>
+              <p class="t-name">Mark T.</p>
+              <p class="t-text">“Professional team, clear communication, and great attention to detail.”</p>
+            </div>
+          </div>
+          <div class="t-card">
+            <div class="avatar" aria-hidden="true"></div>
+            <div>
+              <p class="t-name">Jenna K.</p>
+              <p class="t-text">“The difference is noticeable—especially in our lobby and bathrooms.”</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <h2 class="center-title">Contact</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h2 style="margin-bottom:8px;">Request a Quote</h2>
+            <p style="margin:0 0 14px;color:var(--muted);font-size:14px;">
+              Tell us what you need and we’ll follow up quickly.
+            </p>
+
+            <!-- Simple form (replace action with your form handler) -->
+            <form
+  action="https://formsubmit.co/matthew@mangocleaningsolutions.com"
+  method="POST"
+  style="display:grid; gap:10px;"
+>
+
+  <!-- Required FormSubmit settings -->
+  <input type="hidden" name="_subject" value="New Quote Request - Mango Cleaning Solutions">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://mrhine5435.github.io/mango-site/?success=true">
+
+  <!-- Honeypot (spam protection) -->
+  <input type="text" name="_honey" style="display:none">
+
+  <label style="font-size:13px;color:var(--muted);">
+    Name
+    <input
+      required
+      name="name"
+      type="text"
+      placeholder="Your full name"
+      style="width:100%;margin-top:6px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;"
+    />
+  </label>
+
+  <label style="font-size:13px;color:var(--muted);">
+    Email
+    <input
+      required
+      name="email"
+      type="email"
+      placeholder="you@example.com"
+      style="width:100%;margin-top:6px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;"
+    />
+  </label>
+
+  <label style="font-size:13px;color:var(--muted);">
+    Phone Number
+    <input
+      required
+      name="phone"
+      type="tel"
+      placeholder="(419) 930-7785"
+      pattern="[0-9\-\+\(\) ]+"
+      style="width:100%;margin-top:6px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;"
+    />
+  </label>
+
+  <label style="font-size:13px;color:var(--muted);">
+    Message
+    <textarea
+      required
+      name="message"
+      rows="4"
+      placeholder="Tell us about your space and cleaning needs"
+      style="width:100%;margin-top:6px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;resize:vertical;"
+    ></textarea>
+  </label>
+
+  <button class="btn" type="submit" style="justify-self:start;">
+    Send Request
+  </button>
+</form>
+
+          </div>
+
+          <div class="card">
+            <h2 style="margin-bottom:8px;">Reach Us</h2>
+            <p style="margin:0;color:var(--muted);font-size:14px;">
+              Call: <strong style="color:#3a2b1f;">(419) 930-7785</strong><br/>
+              Email: <strong style="color:#3a2b1f;">hello@mangocleaningsolutions.com</strong><br/><br/>
+              Hours: Mon–Fri, 8:00 AM – 6:00 PM
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+        <div class="foot-left">
+          <span class="logo-mark" aria-hidden="true" style="width:22px;">
+            <img src="mango.png" alt="" loading="lazy" decoding="async">
+          </span>
+          <span>© <span id="year"></span> Mango Cleaning Solutions</span>
+        </div>
+        <div class="foot-right">
+          Call Us: (419) 930-7785<br/>
+          Email: hello@mangocleaningsolutions.com
+        </div>
+      </footer>
+
+    </div>
   </div>
-</header>
 
-<section class="hero" id="home">
-  <h1>Experience the Difference</h1>
-  <p>
-    Calm, consistent, detail-forward cleaning for offices and professional environments.
-  </p>
-  <a class="btn" href="#contact">Request a Quote</a>
-</section>
-
-<footer>
-  <div class="footer-left">
-    <span class="logo-mark" aria-hidden="true" style="width:22px;">
-      <img src="https://raw.githubusercontent.com/mrhine5435/mango-site/main/mango.png" alt="">
-    </span>
-    © <span id="year"></span> MANGO CLEANING SOLUTIONS
-  </div>
-  <div>(419) 930-7785</div>
-</footer>
-
-</div>
-</div>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+  <script>
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
