@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about Mango Cleaning Solutions and our dependable, detail-focused approach to professional cleaning." />
+  <title>About Us — Mango Cleaning Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="mango.png">
+  <link rel="apple-touch-icon" href="mango.png">
+  <style>
+    :root{--bg:#f5f3ef;--page:#fff;--ink:#2b2b2b;--muted:#6b6b6b;--line:#e9e5df;--brand:#7a5a3a;--brand-2:#c9b8a6;--sand:#f1ece5;--shadow:0 18px 50px rgba(0,0,0,.08);--radius:18px;--max:1080px}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+    .shell{min-height:100vh;padding:48px 18px;display:flex;align-items:flex-start;justify-content:center}
+    .page{width:min(var(--max),100%);background:var(--page);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    header{background:#fff;border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;gap:18px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:"Cinzel",serif;font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:13px}
+    .logo-mark{width:34px;display:inline-flex;align-items:center;justify-content:center}
+    .logo-mark img{width:100%;height:auto;display:block}
+    nav ul{list-style:none;display:flex;align-items:center;gap:22px;padding:0;margin:0}
+    nav a{text-decoration:none;color:var(--muted);font-size:14px;font-weight:500}
+    nav a:hover,nav a[aria-current="page"]{color:var(--ink)}
+    .btn{border:1px solid transparent;background:var(--brand);color:#fff;padding:10px 14px;border-radius:999px;text-decoration:none;font-weight:600;font-size:14px;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap}
+    .btn:hover{filter:brightness(.96)}
+    .hero{padding:28px 22px 36px}
+    .hero-card{min-height:390px;border:1px solid var(--line);border-radius:22px;overflow:hidden;display:grid;align-items:end;padding:38px;background:linear-gradient(90deg,rgba(44,32,22,.72),rgba(44,32,22,.12)),url("https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=85") center/cover}
+    .hero-copy{max-width:650px;color:#fff}
+    .kicker{margin:0 0 8px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+    h1,h2{font-family:"Playfair Display",serif;color:#3a2b1f;line-height:1.15}
+    h1{margin:0 0 14px;color:#fff;font-size:clamp(36px,6vw,58px)}
+    .hero-copy p:last-child{margin:0;font-size:17px;max-width:56ch}
+    .section{padding:48px 22px;border-top:1px solid var(--line)}
+    .intro{display:grid;grid-template-columns:.85fr 1.15fr;gap:42px;align-items:start;max-width:920px;margin:auto}
+    .eyebrow{color:var(--brand);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:12px;margin:0 0 8px}
+    h2{font-size:clamp(28px,4vw,38px);margin:0}
+    .copy p{color:var(--muted);margin:0 0 16px}
+    .copy p:last-child{margin-bottom:0}
+    .values{background:var(--sand)}
+    .section-title{text-align:center;margin-bottom:26px}
+    .section-title p{color:var(--muted);margin:8px auto 0;max-width:60ch}
+    .value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:920px;margin:auto}
+    .value-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}
+    .number{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--sand);color:var(--brand);font-weight:600;margin-bottom:18px}
+    .value-card h3{font-family:"Playfair Display",serif;color:#3a2b1f;font-size:21px;margin:0 0 8px}
+    .value-card p{color:var(--muted);font-size:14px;margin:0}
+    .cta{display:flex;align-items:center;justify-content:space-between;gap:28px;max-width:920px;margin:auto;border:1px solid var(--line);border-radius:18px;padding:28px;background:#fff}
+    .cta h2{font-size:28px;margin-bottom:8px}
+    .cta p{color:var(--muted);margin:0}
+    footer{padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:14px;border-top:1px solid var(--line);background:#fff;flex-wrap:wrap}
+    .foot-left{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:13px}
+    .foot-right{color:var(--muted);font-size:13px;text-align:right}
+    @media(max-width:920px){nav ul{display:none}.hero-card{min-height:340px;padding:26px}.intro{grid-template-columns:1fr;gap:20px}.value-grid{grid-template-columns:1fr}.cta{align-items:flex-start;flex-direction:column}}
+    @media(max-width:560px){.shell{padding:18px 10px}.nav{padding:12px 14px}.brand{font-size:11px;letter-spacing:.09em}.nav>.btn{display:none}.hero,.section{padding-left:14px;padding-right:14px}.hero-card{padding:22px}.foot-right{text-align:left}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="page">
+      <header>
+        <div class="nav">
+          <a class="brand" href="index.html">
+            <span class="logo-mark"><img src="mango.png" alt="Mango Cleaning Solutions logo"></span>
+            Mango Cleaning Solutions
+          </a>
+          <nav aria-label="Primary">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#services">Services</a></li>
+              <li><a href="about.html" aria-current="page">About Us</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <a class="btn" href="index.html#contact">Schedule</a>
+        </div>
+      </header>
+      <main>
+        <section class="hero">
+          <div class="hero-card">
+            <div class="hero-copy">
+              <p class="kicker">About Mango Cleaning Solutions</p>
+              <h1>Care you can see. Consistency you can count on.</h1>
+              <p>We help professional spaces feel ready for the people who use them every day—with reliable service, clear communication, and thoughtful attention to detail.</p>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="intro">
+            <div>
+              <p class="eyebrow">Our approach</p>
+              <h2>A better standard for professional cleaning.</h2>
+            </div>
+            <div class="copy">
+              <p>At Mango Cleaning Solutions, we believe local businesses are what make a community feel like home—the people who show up, put in the work, and pour themselves into serving their neighbors every day.</p>
+              <p>We started this business as a husband-and-wife team because we wanted to be part of that story: not the business you think about often, but the one quietly working behind the scenes, making sure your space is clean, cared for, and ready for you to do what you do best.</p>
+              <p>We find value in showing up with integrity and hard work because we know that when we help take cleaning off your plate, you have more time and energy to focus on what matters most: growing your business and serving your community in your own unique way.</p>
+              <p>That’s not just our job; it’s how we build real relationships with the people we serve. We’re honored to support local businesses like yours.</p>
+            </div>
+          </div>
+        </section>
+        <section class="section values">
+          <div class="section-title">
+            <p class="eyebrow">What guides us</p>
+            <h2>Simple. Professional. Consistent.</h2>
+            <p>Three principles shape every space we care for.</p>
+          </div>
+          <div class="value-grid">
+            <article class="value-card"><span class="number">01</span><h3>Dependable service</h3><p>We value punctuality, preparation, and steady results you can trust from visit to visit.</p></article>
+            <article class="value-card"><span class="number">02</span><h3>Detail-forward care</h3><p>We follow a clear plan while paying attention to the small touches that make a space feel truly clean.</p></article>
+            <article class="value-card"><span class="number">03</span><h3>Clear communication</h3><p>We listen closely, set clear expectations, and stay responsive as your cleaning needs evolve.</p></article>
+          </div>
+        </section>
+        <section class="section">
+          <div class="cta">
+            <div><h2>Let’s care for your space.</h2><p>Tell us about your facility and the kind of support you need.</p></div>
+            <a class="btn" href="index.html#contact">Request a Quote</a>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="foot-left"><span class="logo-mark" style="width:22px"><img src="mango.png" alt=""></span><span>© <span id="year"></span> Mango Cleaning Solutions</span></div>
+        <div class="foot-right">Call Us: (419) 416-4404<br>Email: danielle@mangocleaningsolutions.com</div>
+      </footer>
+    </div>
+  </div>
+  <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body>
+</html>
